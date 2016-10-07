@@ -1,14 +1,15 @@
 $(document).ready(function(){
-	var quart = 0;
-	var panda = ["lama", "asticot", "loutre", "panda"];
+
+	var clic = 0;
+	var message = ["lama", "asticot", "loutre", "panda"];
+	var random = Math.floor(Math.random() * len);
 	var len = panda.length;
-	$(".cake").click(function() {
-		quart++;
-		$("#count").text(quart);
-		if(quart % 20 === 0) {
-			alert(panda[Math.floor(Math.random() * len)]);
-		} else {
-			console.log("ok");
+
+	$(".cake").click(function(){
+		clic++;
+		$("#count").text(clic);
+		if(clic % 20 === 0) {
+			alert(message(random));
 		}
 	});
 
